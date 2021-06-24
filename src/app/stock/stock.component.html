@@ -1,0 +1,28 @@
+<div class="container card">
+  <div class="row my-2">
+    <h3>Stock</h3>
+  </div>
+  <div class="row ms-1 my-2">
+    <p [ngStyle]="{color: stylePineapples()}">Pineapples: {{pineapples}}</p>
+  </div>
+  <div class="row ms-1 my-2">
+    <p [ngStyle]="{color: styleBananas()}">Bananas: {{bananas}}</p>
+  </div>
+  <div class="row ms-1 my-2">
+    <p [ngStyle]="{color: styleOranges()}">Orange: {{oranges}}</p>
+  </div>
+  <div class="row ms-1 my-2">
+    <p>Total: {{subTotal()}}</p>
+  </div>
+
+  <div class="row text-end">
+    <div class="col">
+      <button (click)="removePineapplesStock()" class="btn btn-secondary">- Pineapple</button>
+      <button (click)="addPineapplesStock()" class="btn btn-primary me-2">+ Pineapple</button>
+      <button (click)="removeBananasStock()" class="btn btn-secondary">- Banana</button>
+      <button (click)="addBananasStock()" class="btn btn-primary me-2">+ Banana</button>
+      <button (click)="removeOrangesStock()" class="btn btn-secondary">- Orange</button>
+      <button (click)="addOrangesStock()" class="btn btn-primary">+ Orange</button>
+    </div>
+  </div>
+</div>

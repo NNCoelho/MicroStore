@@ -1,0 +1,22 @@
+<div class="container card">
+  <div class="row my-2">
+    <h3>Store</h3>
+    <h6>Pineapples: {{pineapples}}</h6>
+    <h6>Bananas: {{bananas}}</h6>
+    <h6>Oranges: {{oranges}}</h6>
+  </div>
+
+  <div class="row my-2">
+    <div class="col-2" *ngFor="let product of products">
+      <img class="icon me-1" src="../../assets/images/{{product.icon}}" /><span>{{product.name}}</span>
+    </div>
+  </div>
+
+  <div class="row text-end">
+    <div class="col">
+      <button (click)="addPineapples()" class="btn btn-secondary">+ Pineapple</button>
+      <button (click)="addBananas()" class="btn btn-secondary">+ Banana</button>
+      <button (click)="addOranges()" class="btn btn-secondary">+ Orange</button>
+    </div>
+  </div>
+</div>

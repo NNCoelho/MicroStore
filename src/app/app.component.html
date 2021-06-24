@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  <div class="row spaces">
+    <div class="col-4">
+      <img class="logo-size ms-5" src="../assets/images/store.png" />
+    </div>
+    <div class="col-4 text-center align-self-center">
+      <h1>{{title}}</h1>
+    </div>
+    <div class="col-4 text-end">
+      <p class="me-5"><button (click)="showStore()" class="btn btn-primary btn-size">Store</button></p>
+      <p class="me-5"><button (click)="showStock()" class="btn btn-secondary btn-size">Stock</button></p>
+    </div>
+  </div>
+  <app-store *ngIf="store_visible"></app-store>
+  <app-stock *ngIf="stock_visible"></app-stock>
+</div>
